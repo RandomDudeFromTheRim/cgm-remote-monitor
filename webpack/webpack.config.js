@@ -56,6 +56,9 @@ pluginArray.push(new webpack.ProvidePlugin({
   process: 'process/browser',
 }));
 
+pluginArray.push(new webpack.ProvidePlugin({
+  Buffer: ['buffer', 'Buffer']
+}));
 // limit Timezone data from Moment
 
 pluginArray.push(new MomentTimezoneDataPlugin({
